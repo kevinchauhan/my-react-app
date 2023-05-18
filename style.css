@@ -1,0 +1,286 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: rgb(0, 0, 0, 0.7);
+    text-decoration: none !important;
+    list-style: none;
+    font-family: "Poppins", sans-serif;
+    font-size: 98%;
+  }
+  :root {
+    --color-primary: 63, 128, 234;
+  }
+  .bg-primary {
+    background-color: rgb(63, 128, 234) !important;
+  }
+  .bg-secondary {
+    background-color: #e0eafc !important;
+  }
+  .bg-dark {
+    background-color: #293042 !important;
+  }
+  .bg-tertiary {
+    background-color: rgb(239, 242, 246);
+  }
+  .bg-success {
+    background-color: rgb(75, 191, 115) !important;
+  }
+  .bg-success-light {
+    background-color: rgba(75, 191, 115, 0.175) !important;
+  }
+  .bg-warning {
+    background-color: rgb(229, 165, 75) !important;
+  }
+  .bg-danger {
+    background-color: #dc3545 !important;
+  }
+  .bg-danger-light {
+    background-color: rgba(217, 83, 79, 0.175) !important;
+  }
+  .text-primary {
+    color: rgb(var(--color-primary)) !important;
+  }
+  .text-success {
+    color: #4bbf73 !important;
+  }
+  .text-danger {
+    color: #d9534f !important;
+  }
+  .container-fluid {
+    background-color: #f6f8fb;
+  }
+  strong {
+    font-weight: 500;
+  }
+  /* ------------------------- sidebar start --------------------- */
+  aside {
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    min-width: 230px;
+    max-width: 260px;
+    margin-left: -230px;
+    transition: all 0.5s;
+    z-index: 9999;
+  }
+  aside.active {
+    margin-left: 0 !important;
+  }
+  aside a,
+  aside i {
+    color: rgb(255, 255, 255, 0.5);
+    font-size: 0.875rem;
+  }
+  aside a:hover,
+  aside li:hover a,
+  aside a:hover i {
+    color: rgb(255, 255, 255, 0.7);
+  }
+  aside::-webkit-scrollbar {
+    background: transparent;
+    width: 8px;
+  }
+  aside::-webkit-scrollbar-thumb {
+    background-color: rgb(255, 255, 255, 0);
+    transition: all 1s;
+  }
+  aside:hover::-webkit-scrollbar-thumb {
+    transition: all 5s;
+    background-color: rgb(255, 255, 255, 0.4);
+    border-radius: 5px;
+  }
+  /* ------------------------- sidebar end --------------------- */
+  
+  /* ------------------------ navbar start ------------------------ */
+  input[type="search"],
+  input[type="search"]:focus {
+    background-color: #f3f6fb;
+    border: none;
+    box-shadow: none;
+  }
+  .search-btn {
+    background-color: #f3f6fb;
+  }
+  .btn:focus {
+    box-shadow: none;
+  }
+  .head-icon:hover .comment {
+    top: -5px !important;
+  }
+  .head-icon .comment {
+    width: 20px;
+    height: 20px;
+    transition: all 0.1s;
+  }
+  .nav-img .dropdown-menu[data-bs-popper] {
+    right: 0;
+    left: auto;
+  }
+  @media (width<= 768px) {
+    .navbar {
+      width: 100vw !important;
+    }
+    .content {
+      width: 100vw;
+    }
+    main {
+      overflow-x: auto;
+    }
+  }
+  .content{
+      height: 88vh;
+      overflow-y: auto;
+  }
+  /* ------------------------ navbar end ------------------------ */
+  
+  /* ------------------------ card start ------------------------ */
+  .card-icon {
+    width: 48px;
+    height: 48px;
+    line-height: 55px;
+    background-color: #e0eafc;
+  }
+  /* ------------------------ card end ------------------------ */
+  
+  /* ------------------------ calender-sec start ------------------ */
+  /* calender */
+  .calendar {
+    height: 100%;
+    margin: 0px auto;
+    padding: 20px;
+    box-sizing: border-box;
+    background: #ffffff;
+  }
+  .calendar .calendar-dates,
+  .calendar .calendar-day-name {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-gap: 8px;
+  }
+  .calendar .calendar-dates-day {
+    font-family: "Manrope", sans-serif;
+    font-size: 13px;
+    border: 1px solid #efefef;
+    padding: 4px;
+    box-sizing: border-box;
+    background: #f8f8f8;
+    border-radius: 4px;
+    color: #333;
+  }
+  .calendar .calendar-dates-day-empty {
+    background: none;
+    border: 0;
+    color: #dcdcdc;
+    min-height: 28px;
+  }
+  .calendar .calendar-day-name div {
+    text-align: center;
+    margin-bottom: 12px;
+    font-size: 13px;
+    font-weight: 700;
+  }
+  .calendar .calendar-title {
+    padding-bottom: 16px;
+    text-align: center;
+    font-weight: 500;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 12px;
+  }
+  .calendar .calendar-dates-day.today-date {
+    background: #555;
+    color: #fff;
+  }
+  .calendar #prevMonth,
+  .calendar #nextMonth,
+  .calendar #today {
+    padding: 2px 6px;
+    box-sizing: border-box;
+    font-family: "Manrope", sans-serif;
+    font-size: 20px;
+    line-height: 20px;
+    border: 1px solid #e0e0e0;
+    border-radius: 4px;
+    cursor: pointer;
+    color: #333;
+  }
+  .calendar #today {
+    font-size: 13px;
+  }
+  .calendar .calendar-title-text {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    font-weight: 700;
+  }
+  .calendar .calendar-button-group {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  /* calender */
+  .appoints div::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -11px;
+    width: 20px;
+    height: 20px;
+    background-color: #fff;
+    border-radius: 50%;
+    border: 3px solid rgb(var(--color-primary));
+  }
+  /* doughnut */
+  @media (min-width: 768px) {
+    .doughnut {
+      height: 250px !important;
+    }
+  }
+  .table-badge{
+      width: 15px;
+      height: 15px;
+  }
+  /* ----------------------- calender-sec end --------------------- */
+  
+  /* --------------------------------- chat-box start -------------------- */
+  /* --------------------------------- chat-box start -------------------- */
+  .message {
+    padding: 1rem;
+    background-color: rgb(239, 242, 246);
+  }
+  /* --------------------------------- chat-box end -------------------- */
+  /* --------------------------------- chat-box end -------------------- */
+  
+  /* --------------------------------- analytics start -------------------- */
+  /* --------------------------------- analytics start -------------------- */
+  .analytics-table-1 tr td {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+  .analytics-table tr td {
+    padding-top: 0.7rem;
+    padding-bottom: 0.7rem;
+  }
+  #tradingview_8a933{
+      min-height: 300px;
+  }
+  /* --------------------------------- analytics end -------------------- */
+  /* --------------------------------- analytics end -------------------- */
+  
+  /* --------------------------------- task start -------------------- */
+  /* --------------------------------- task start -------------------- */
+  .grab .bg-tertiary{
+      cursor:grab;
+  }
+  .sortable-chosen {
+      box-shadow: 8px 8px 32px #e1e1e1;
+  }
+  .sortable-drag {
+      opacity: 0;
+  }
+  /* --------------------------------- task end -------------------- */
+  /* --------------------------------- task end -------------------- */
+  
